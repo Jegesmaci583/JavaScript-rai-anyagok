@@ -35,26 +35,26 @@ var kep4 = {
 */
 
 var kepeim = [
-  (kep = {
+  {
     kepEleresiut: "kepek/cyberlany.jpg",
-    kepCim: "Cyber Lány",
+    kepCim: "1. kép címe",
     kepAr: 1111,
-  }),
-  (kep2 = {
+  },
+  {
     kepEleresiut: "kepek/medve.jpg",
-    kepCim: "Medve",
+    kepCim: "2. kép címe",
     kepAr: 2222,
-  }),
-  (kep3 = {
+  },
+  {
     kepEleresiut: "kepek/retro.jpg",
-    kepCim: "Retro Háttérrrrrrrrrrr",
+    kepCim: "3. kép címe",
     kepAr: 3333,
-  }),
-  (kep4 = {
+  },
+  {
     kepEleresiut: "kepek/re8.jpg",
-    kepCim: "Resident Evil 8",
+    kepCim: "4. kép címe",
     kepAr: 4444,
-  }),
+  },
 ];
 console.log(kepeim);
 
