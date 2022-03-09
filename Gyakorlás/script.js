@@ -58,44 +58,69 @@ var kepeim = [
 ];
 console.log(kepeim);
 
-var atlgAr=atlagAr();
-console.log(atlgAr);
-
-function atlagAr = 0;
-    var osszeg = 0;
-    for (let index = 0; index < kepAr.length; index++) {
-    atlag = kepAr[index] + atlag;
-}
-
-for (let index = 0; index < kepeim.length; index++) {
-  if (kepeim[index].kepCim.length >= 20) {
-    console.log(kepeim[index]);
-  }
-}
-
 /*Mennyi a képek átlaga?*/
 /*Melyik az a kép, amelyik a címe 20 karakternél nagyobb?*/
 /*Van-e 10.000-nél drágább kép?*/
 
+/*
 var atlag = 0;
 for (let index = 0; index < kepAr.length; index++) {
   atlag = kepAr[index] + atlag;
 }
 console.log("Átlag:", atlag / kepAr.length);
+*/
 
-var i = 0;
-while (i < kepAr.length && !(kepAr[i] > 10000)) {
-  i++;
-}
-if (i < kepAr.length) {
-  console.log("Van 10.000-nél drágább kép");
-} else {
-  console.log("Nincsen 10.000-nél drágább kép");
+var atlgAr = atlagAr();
+console.log(atlgAr);
+
+function atlagAr() {
+  var osszeg = 0;
+  for (let index = 0; index < kepAr.length; index++) {
+    osszeg = kepeim[index].kepAr + osszeg;
+  }
+  var atlag = osszeg / kepeim.length;
+  return atlag;
 }
 
+/*
+for (let index = 0; index < kepeim.length; index++) {
+  if (kepeim[index].kepCim.length >= 20) {
+    console.log(kepeim[index]);
+  }
+}
+*/
+
+var tizezefelett = tizezerfelett();
+console.log(tizezefelett);
+
+function tizezerfelett() {
+  var i = 0;
+  while (i < kepAr.length && !(kepAr[i] > 10000)) {
+    i++;
+  }
+  if (i < kepAr.length) {
+    console.log("Van 10.000-nél drágább kép");
+  } else {
+    console.log("Nincsen 10.000-nél drágább kép");
+  }
+}
+
+/*
 for (let index = 0; index < kepCim.length; index++) {
   if (kepCim[index].length >= 20) {
     console.log("Leghoszabb kép címe:", kepCim[index]);
+  }
+}
+*/
+
+var kpcim = kepcimhossz();
+console.log(kpcim);
+
+function kepcimhossz() {
+  for (let index = 0; index < kepCim.length; index++) {
+    if (kepCim[index].length >= 20) {
+      console.log("Leghoszabb kép címe:", kepCim[index]);
+    }
   }
 }
 
