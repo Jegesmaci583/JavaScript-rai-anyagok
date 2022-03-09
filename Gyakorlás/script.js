@@ -71,7 +71,7 @@ console.log("Átlag:", atlag / kepAr.length);
 */
 
 var atlgAr = atlagAr();
-console.log(atlgAr);
+console.log("Átlag:", atlgAr);
 
 function atlagAr() {
   var osszeg = 0;
