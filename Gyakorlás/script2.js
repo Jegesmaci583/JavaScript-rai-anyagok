@@ -50,4 +50,35 @@ function init() {
   txtArak+="</ul>";
   ID("arak").innerHTML = txtArak;
 
+  ID("uj").addEventListener("click",kepbetoltes);
+  ID("balra").addEventListener("click",ballepes,);
+  ID("jobbra").addEventListener("click",jobblepes,);
+megjelenit(aktkep);
+}
+
+var aktkep=0;
+
+function ballepes(){
+  aktkep--;
+  if(aktkep<0) {
+    aktkep=kepeim.length-1;
+  }
+  megjelenit(aktkep);
+}
+
+function jobblepes(){
+  aktkep++;
+  if(aktkep>=kepeim.length) {
+    aktkep=0;
+  }
+  megjelenit(aktkep);
+}
+function kepbetoltes(){
+  var rnd=Math.floor(Math.random()*kepeim.length)
+  megjelenit(rnd);
+}
+
+function megjelenit(index){
+  ID("fokep").src=kepeim[index].kepEleresiut;
+  ID("fokep").alt=kepeim[index].kepCim;
 }
