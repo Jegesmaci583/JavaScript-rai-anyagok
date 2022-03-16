@@ -1,0 +1,9 @@
+table, th, td {
+    border: 1px solid black;
+  }
+
+.formazas {
+    border:2px dashed purple;
+    background: lightcoral;
+    font-size: 20px;
+}
